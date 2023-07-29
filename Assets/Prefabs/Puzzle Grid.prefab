@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3354766869393290146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6005057492996113729}
+  - component: {fileID: 346274923847095468}
+  m_Layer: 5
+  m_Name: Puzzle Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6005057492996113729
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354766869393290146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &346274923847095468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354766869393290146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67eb0952b94f44bbb3d14c50afae38bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cells: {x: 6, y: 6}
+  Size: 1
+  ArrowUp: {fileID: 5764182560619855270, guid: e2d34a41f88d6dc42943a07e4c9e6e93, type: 3}
+  ArrowDown: {fileID: 954292726865946486, guid: c8b947bdc606e76469bbfacd5c6f9958, type: 3}
+  ArrowLeft: {fileID: 4484412558754359805, guid: d7f1110c6038e1649aeac2d900d8232a, type: 3}
+  ArrowRight: {fileID: 5255495063335454239, guid: a58482ab2ee3b014487eddf3d3f05d2d, type: 3}
+  Family: {fileID: 7910239243032140004, guid: e658347506152e0478c927bfcddcd60d, type: 3}
+  Decor:
+  - {fileID: 5245275273233486835, guid: afd9b1ac77027434da810a5f4d901049, type: 3}
+  - {fileID: 5245275273233486835, guid: 15e3d61258ce36d4eb7b1ecaf47abcff, type: 3}
+  - {fileID: 5245275273233486835, guid: 896f6f5d62b05524b949a2555a6e5a65, type: 3}
+  - {fileID: 5245275273233486835, guid: e7365b7d03d52264da6aff5de011286c, type: 3}
+  Furniture:
+  - {fileID: 7410740634688278143, guid: 38d5beef98c2cb0469a845daae1a34dd, type: 3}
+  - {fileID: 7410740634688278143, guid: 457507dc1d1b31b42bbf91d445feb8a9, type: 3}

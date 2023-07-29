@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8918880d163742b1bff3227abb601fab, type: 3}
+  m_Name: DefaultPuzzle
+  m_EditorClassIdentifier: 
+  <LevelSize>k__BackingField: {x: 6, y: 6}
+  <StartCoordinates>k__BackingField: {x: 0, y: 4}
+  <EndCoordinates>k__BackingField: {x: 5, y: 1}
+  <PathLengthLimit>k__BackingField: {x: 9, y: 9}

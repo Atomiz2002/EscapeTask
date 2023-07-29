@@ -1,0 +1,39 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:ObjectField label="Camera" binding-path="Cam" name="camera" type="UnityEngine.Camera, UnityEngine.CoreModule" class="unity-base-field__aligned" />
+    <uie:ObjectField label="Puzzle Complete" binding-path="PuzzleComplete" name="canvas_group" type="UnityEngine.CanvasGroup, UnityEngine.UIModule" class="unity-base-field__aligned" />
+    <ui:IntegerField label="Cell Size" value="1" binding-path="CellSize" name="cell_size" class="unity-base-field__aligned" />
+    <ui:Foldout text="Arrows" name="arrows_foldout" view-data-key="puzzle-manager-arrows-foldout" class="unity-base-field__aligned" style="-unity-font-style: bold; margin-top: 10px;">
+        <uie:ObjectField label="Up" name="arrow_up" binding-path="ArrowUp" type="GridSystem.PuzzleGrid.Arrow, Assembly-CSharp" class="unity-base-field__aligned" style="-unity-font-style: normal;" />
+        <uie:ObjectField label="Down" name="arrow_down" binding-path="ArrowDown" type="GridSystem.PuzzleGrid.Arrow, Assembly-CSharp" class="unity-base-field__aligned" style="-unity-font-style: normal;" />
+        <uie:ObjectField label="Left" name="arrow_left" binding-path="ArrowLeft" type="GridSystem.PuzzleGrid.Arrow, Assembly-CSharp" class="unity-base-field__aligned" style="-unity-font-style: normal;" />
+        <uie:ObjectField label="Right" name="arrow_right" binding-path="ArrowRight" type="GridSystem.PuzzleGrid.Arrow, Assembly-CSharp" class="unity-base-field__aligned" style="-unity-font-style: normal;" />
+    </ui:Foldout>
+    <ui:EnumField label="Draw Gizmos" type="GridSystem.PuzzleGrid.PuzzleManager+PuzzleManagerGizmos, Assembly-CSharp" name="draw-gizmos" binding-path="DrawGizmos" class="unity-base-field__aligned" style="-unity-font-style: bold; padding-top: 10px;" />
+    <ui:Foldout text="Elements" name="elements-foldout" view-data-key="puzzle-manager-elements-foldout" style="-unity-font-style: bold; padding-top: 10px;">
+        <ui:VisualElement name="container" style="-unity-font-style: normal;">
+            <uie:ObjectField label="Puzzle" name="puzzle" binding-path="Puzzle" type="GridSystem.PuzzleGrid.LevelGeneration.Puzzle, Assembly-CSharp" class="unity-base-field__aligned" />
+            <uie:ObjectField label="Family" name="family" binding-path="Family" type="GridSystem.Elements.Family, Assembly-CSharp" class="unity-base-field__aligned" />
+            <ui:ListView binding-path="MovableElements" show-border="true" selection-type="Multiple" show-alternating-row-backgrounds="All" reorderable="true" show-add-remove-footer="true" show-bound-collection-size="false" name="movable-elements" show-foldout-header="true" header-title="Movable" />
+            <ui:ListView binding-path="ImmovableElements" show-border="true" selection-type="Multiple" show-alternating-row-backgrounds="All" reorderable="true" name="immovable-elements" show-bound-collection-size="false" show-add-remove-footer="true" show-foldout-header="true" header-title="Immovable" />
+        </ui:VisualElement>
+    </ui:Foldout>
+    <ui:VisualElement name="generate-level-container" style="padding-top: 10px; display: flex;">
+        <ui:Foldout name="foldout" text="&lt;b&gt;Generate Levels&lt;/b&gt;" view-data-key="puzzle-manager-generate-level">
+            <ui:VisualElement name="attempts">
+                <ui:IntegerField label="Level Generation Attempts" value="5" name="level-generation" binding-path="LevelGenerationAttempts" class="unity-base-field__aligned">
+                    <ui:Button text="Generate Level" display-tooltip-when-elided="true" style="width: 40%;" />
+                </ui:IntegerField>
+                <ui:IntegerField label="Path Generation Attempts" value="10" name="path-generation" binding-path="PathGenerationAttempts" class="unity-base-field__aligned">
+                    <ui:Button text="Generate Path" display-tooltip-when-elided="true" style="width: 40%;" />
+                </ui:IntegerField>
+                <ui:IntegerField label="Randomize Placement Attempts" value="20" name="randomize-placements" binding-path="PlacementAttempts" class="unity-base-field__aligned">
+                    <ui:Button text="Randomize Placements" display-tooltip-when-elided="true" style="width: 40%;" />
+                </ui:IntegerField>
+                <ui:IntegerField label="Shuffle Elements Attempts" value="1" name="shuffle-elements" binding-path="ShuffleAttempts" class="unity-base-field__aligned">
+                    <ui:Button text="Shuffle Elements" display-tooltip-when-elided="true" style="width: 40%;" />
+                </ui:IntegerField>
+            </ui:VisualElement>
+        </ui:Foldout>
+        <ui:Toggle binding-path="GenerateLevels" name="generate-level" class="unity-base-field__aligned" style="padding-left: 5px; position: absolute; -unity-font-style: bold; left: 95px;" />
+    </ui:VisualElement>
+</ui:UXML>
